@@ -16,6 +16,7 @@ class SplashScreenActivity : AppCompatActivity() {
         binding.root.postDelayed(2000){
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            finish()
         }
     }
 }
