@@ -9,7 +9,7 @@ import androidx.core.content.res.ResourcesCompat
 
 private const val STROKE_WIDTH = 12f // has to be float
 
-class MyCanvasView(context: Context): View(context) {
+class MyCanvasView(context: Context) : View(context) {
     private lateinit var extraCanvas: Canvas
     private lateinit var extraBitmap: Bitmap
     private lateinit var frame: Rect
@@ -22,8 +22,7 @@ class MyCanvasView(context: Context): View(context) {
 
     private val touchTolerance = ViewConfiguration.get(context).scaledTouchSlop
 
-    private val backgroundColor = ResourcesCompat.getColor(resources, R.color.colorBackground, null)
-    private val drawColor = ResourcesCompat.getColor(resources, R.color.colorPaint, null)
+    private val drawColor = ResourcesCompat.getColor(resources, R.color.black, null)
 
     // Set up the paint with which to draw.
     private val paint = Paint().apply {
@@ -43,12 +42,13 @@ class MyCanvasView(context: Context): View(context) {
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
         super.onSizeChanged(width, height, oldWidth, oldHeight)
 
-        extraBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+//        extraBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
+        var originBitmap = BitmapFactory.decodeResource(context.resources, R.drawable.note_pad)
+        extraBitmap = originBitmap.copy(Bitmap.Config.ARGB_8888, true)
         extraCanvas = Canvas(extraBitmap)
-        extraCanvas.drawColor(backgroundColor)
+//        extraCanvas.drawColor(backgroundColor)
 
-//        if (::extraBitmap.isInitialized) extraBitmap.recycle()
-        if (extraBitmap != null && extraBitmap.isRecycled){
+        if (extraBitmap != null && extraBitmap.isRecycled) {
             extraBitmap.recycle()
         }
 
@@ -62,8 +62,6 @@ class MyCanvasView(context: Context): View(context) {
         super.onDraw(canvas)
         canvas.drawBitmap(extraBitmap, 0f, 0f, null)
 
-        // Draw a frame around the canvas.
-        canvas.drawRect(frame, paint)
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
@@ -91,7 +89,12 @@ class MyCanvasView(context: Context): View(context) {
         if (dx >= touchTolerance || dy >= touchTolerance) {
             // QuadTo() adds a quadratic bezier from the last point,
             // approaching control point (x1,y1), and ending at (x2,y2).
-            path.quadTo(currentX, currentY, (motionTouchEventX + currentX) / 2, (motionTouchEventY + currentY) / 2)
+            path.quadTo(
+                currentX,
+                currentY,
+                (motionTouchEventX + currentX) / 2,
+                (motionTouchEventY + currentY) / 2
+            )
             currentX = motionTouchEventX
             currentY = motionTouchEventY
             // Draw the path in the extra bitmap to cache it.
