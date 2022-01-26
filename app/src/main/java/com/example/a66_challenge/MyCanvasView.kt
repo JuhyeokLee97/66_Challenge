@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewConfiguration
 import androidx.core.content.res.ResourcesCompat
 
-private const val STROKE_WIDTH = 12f // has to be float
+private const val STROKE_WIDTH = 3f // has to be float
 
 class MyCanvasView(context: Context) : View(context) {
     private lateinit var extraCanvas: Canvas
