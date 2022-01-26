@@ -39,12 +39,16 @@ class MyCanvasView(context: Context) : View(context) {
 
     private var path = Path()
 
+    public fun setCanvasBackground(bitmap: Bitmap){
+        extraBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true)
+    }
+
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
         super.onSizeChanged(width, height, oldWidth, oldHeight)
 
 //        extraBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-        var originBitmap = BitmapFactory.decodeResource(context.resources, R.drawable.note_pad)
-        extraBitmap = originBitmap.copy(Bitmap.Config.ARGB_8888, true)
+//        var originBitmap = BitmapFactory.decodeResource(context.resources, R.drawable.note_pad)
+//        extraBitmap = originBitmap.copy(Bitmap.Config.ARGB_8888, true)
         extraCanvas = Canvas(extraBitmap)
 //        extraCanvas.drawColor(backgroundColor)
 
