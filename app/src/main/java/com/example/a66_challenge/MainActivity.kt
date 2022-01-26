@@ -28,6 +28,7 @@ class MainActivity : AppCompatActivity() {
     private fun initViews() {
         initSuccessStatusPercentText()
         initToDoFragment()
+        initReviewFragment()
     }
 
     private fun initSuccessStatusPercentText() {
@@ -60,6 +61,12 @@ class MainActivity : AppCompatActivity() {
     private fun initToDoFragment() {
         val toDoFragment = ToDoFragment()
         supportFragmentManager.beginTransaction().replace(R.id.to_do_frame_layout, toDoFragment)
+            .commit()
+    }
+
+    private fun initReviewFragment() {
+        val reviewFragment = ReviewFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.review_frame_layout, reviewFragment)
             .commit()
     }
 
