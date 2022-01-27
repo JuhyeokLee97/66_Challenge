@@ -7,6 +7,59 @@
     tools:context=".MainActivity">
 
 
+    <View
+        android:id="@+id/top_background_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/white_blue"
+        app:layout_constraintBottom_toBottomOf="@id/seek_bar_day"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="Day.1"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/tv_logo"
+        app:layout_constraintStart_toEndOf="@id/tv_logo"
+        app:layout_constraintTop_toTopOf="@id/tv_logo" />
+
+    <FrameLayout
+        android:id="@+id/date_frame_layout"
+        android:layout_width="350dp"
+        android:layout_height="0dp"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/tv_logo"
+        app:layout_constraintEnd_toEndOf="@id/dividerPivot9"
+        app:layout_constraintTop_toTopOf="@id/tv_logo" />
+
+    <SeekBar
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        app:layout_constraintStart_toStartOf="@id/dividerPivot0"
+        app:layout_constraintEnd_toEndOf="@id/dividerPivot9"
+        app:layout_constraintTop_toBottomOf="@id/tv_logo"
+        android:max="66"
+        android:min="1"
+        android:layout_marginTop="10dp"
+        android:id="@+id/seek_bar_day"/>
+
+    <TextView
+        android:id="@+id/tv_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="#66챌린지"
+        android:textColor="@color/white"
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@id/dividerPivot0"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:id="@+id/tv_first_title"
         android:layout_width="wrap_content"
@@ -16,7 +69,7 @@
         android:textColor="@color/black"
         android:textSize="20sp"
         app:layout_constraintStart_toStartOf="@id/successStatusBar"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/top_background_view" />
 
     <EditText
         android:id="@+id/et_success_percentage"
