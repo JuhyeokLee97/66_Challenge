@@ -25,13 +25,9 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         initSuccessStatusPercentText()
-        initToDoCanvas()
-        initReviewCanvas()
-        initPromiseTimeValueCanvas()
-        initPromisePlaceValueCanvas()
-        initPromiseDoingValueCanvas()
-        initDateCanvas()
+        initCanvas()
     }
+
 
     private fun initSuccessStatusPercentText() {
         binding.etSuccessPercentage.addTextChangedListener {
@@ -59,44 +55,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
-    private fun initToDoCanvas() {
+    private fun initCanvas() {
         val toDoFragment = ToDoFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.to_do_frame_layout, toDoFragment)
+        supportFragmentManager.beginTransaction().replace(R.id.canvas_view, toDoFragment)
             .commit()
     }
-
-    private fun initReviewCanvas() {
-        val reviewFragment = ReviewFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.review_frame_layout, reviewFragment)
-            .commit()
-    }
-
-    private fun initPromiseTimeValueCanvas() {
-        val promiseTimeValueFragment = PromiseTimeValueFragment()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.promise_time_value_frame_layout, promiseTimeValueFragment)
-            .commit()
-    }
-
-    private fun initPromisePlaceValueCanvas() {
-        val promisePlaceValueFragment = PromisePlaceValueFragment()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.promise_place_value_frame_layout, promisePlaceValueFragment)
-            .commit()
-    }
-
-    private fun initPromiseDoingValueCanvas() {
-        val promiseDoingValueFragment = PromiseDoingValueFragment()
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.promise_doing_value_frame_layout, promiseDoingValueFragment)
-            .commit()
-    }
-
-    private fun initDateCanvas() {
-        val dateFragment = DateFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.date_frame_layout, dateFragment)
-            .commit()
-    }
-
 }
