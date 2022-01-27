@@ -17,7 +17,6 @@ class ReviewFragment: Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val myCanvasView = MyCanvasView(requireContext())
-        myCanvasView.setCanvasBackground(BitmapFactory.decodeResource(requireContext().resources, R.drawable.note_pad))
         myCanvasView.systemUiVisibility = View.SYSTEM_UI_FLAG_FULLSCREEN
         myCanvasView.contentDescription = getString(R.string.canvasContentDescription)
 

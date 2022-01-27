@@ -22,6 +22,7 @@ class MyCanvasView(context: Context) : View(context) {
 
     private val touchTolerance = ViewConfiguration.get(context).scaledTouchSlop
 
+    private val backgroundColor = ResourcesCompat.getColor(resources, R.color.colorBackground, null)
     private val drawColor = ResourcesCompat.getColor(resources, R.color.black, null)
 
     // Set up the paint with which to draw.
@@ -39,23 +40,12 @@ class MyCanvasView(context: Context) : View(context) {
 
     private var path = Path()
 
-    fun setCanvasBackground(bitmap: Bitmap){
-        extraBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true)
-    }
-
-    fun setCanvasBackgroundColor(color: Int){
-        extraCanvas.drawColor(color)
-    }
-
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
         super.onSizeChanged(width, height, oldWidth, oldHeight)
 
-//        extraBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-//        var originBitmap = BitmapFactory.decodeResource(context.resources, R.drawable.note_pad)
-//        extraBitmap = originBitmap.copy(Bitmap.Config.ARGB_8888, true)
+        extraBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
         extraCanvas = Canvas(extraBitmap)
-//        extraCanvas.drawColor(backgroundColor)
-
+        extraCanvas.drawColor(backgroundColor)
         if (extraBitmap != null && extraBitmap.isRecycled) {
             extraBitmap.recycle()
         }
