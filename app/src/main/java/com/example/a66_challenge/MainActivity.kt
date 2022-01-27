@@ -56,8 +56,8 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initCanvas() {
-        val toDoFragment = ToDoFragment()
-        supportFragmentManager.beginTransaction().replace(R.id.canvas_view, toDoFragment)
+        val canvasFragment = CanvasFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.canvas_view, canvasFragment)
             .commit()
     }
 }

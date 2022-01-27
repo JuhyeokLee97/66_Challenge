@@ -1,6 +1,5 @@
 package com.example.a66_challenge.canvas.fragment
 
-import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,7 +8,7 @@ import androidx.fragment.app.Fragment
 import com.example.a66_challenge.MyCanvasView
 import com.example.a66_challenge.R
 
-class PromisePlaceValueFragment : Fragment() {
+class CanvasFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
