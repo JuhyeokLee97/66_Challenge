@@ -39,8 +39,12 @@ class MyCanvasView(context: Context) : View(context) {
 
     private var path = Path()
 
-    public fun setCanvasBackground(bitmap: Bitmap){
+    fun setCanvasBackground(bitmap: Bitmap){
         extraBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true)
+    }
+
+    fun setCanvasBackgroundColor(color: Int){
+        extraCanvas.drawColor(color)
     }
 
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
