@@ -30,6 +30,7 @@ class MainActivity : AppCompatActivity() {
         initPromiseTimeValueCanvas()
         initPromisePlaceValueCanvas()
         initPromiseDoingValueCanvas()
+        initDateCanvas()
     }
 
     private fun initSuccessStatusPercentText() {
@@ -89,6 +90,12 @@ class MainActivity : AppCompatActivity() {
         val promiseDoingValueFragment = PromiseDoingValueFragment()
         supportFragmentManager.beginTransaction()
             .replace(R.id.promise_doing_value_frame_layout, promiseDoingValueFragment)
+            .commit()
+    }
+
+    private fun initDateCanvas() {
+        val dateFragment = DateFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.date_frame_layout, dateFragment)
             .commit()
     }
 

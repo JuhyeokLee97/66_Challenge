@@ -60,7 +60,7 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@id/date_frame_layout"
         app:layout_constraintEnd_toEndOf="@id/date_frame_layout"
-        app:layout_constraintHorizontal_bias=".3"
+        app:layout_constraintHorizontal_bias=".25"
         app:layout_constraintStart_toStartOf="@id/date_frame_layout" />
 
     <TextView
@@ -71,7 +71,7 @@
         android:textSize="40sp"
         app:layout_constraintBottom_toBottomOf="@id/date_frame_layout"
         app:layout_constraintEnd_toEndOf="@id/date_frame_layout"
-        app:layout_constraintHorizontal_bias=".6"
+        app:layout_constraintHorizontal_bias=".55"
         app:layout_constraintStart_toStartOf="@id/date_frame_layout" />
 
     <TextView
