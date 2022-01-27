@@ -4,11 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.LayoutInflater
-import android.view.View.SYSTEM_UI_FLAG_FULLSCREEN
 import android.widget.Toast
-import androidx.core.content.edit
 import androidx.core.widget.addTextChangedListener
+import com.example.a66_challenge.canvas.fragment.*
 import com.example.a66_challenge.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -27,7 +25,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun initViews() {
         initSuccessStatusPercentText()
-        initToDoFragment()
+        initToDoCanvas()
+        initReviewCanvas()
+        initPromiseTimeValueCanvas()
+        initPromisePlaceValueCanvas()
+        initPromiseDoingValueCanvas()
+        initDateCanvas()
     }
 
     private fun initSuccessStatusPercentText() {
@@ -57,11 +60,43 @@ class MainActivity : AppCompatActivity() {
     }
 
 
-    private fun initToDoFragment() {
+    private fun initToDoCanvas() {
         val toDoFragment = ToDoFragment()
         supportFragmentManager.beginTransaction().replace(R.id.to_do_frame_layout, toDoFragment)
             .commit()
     }
 
+    private fun initReviewCanvas() {
+        val reviewFragment = ReviewFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.review_frame_layout, reviewFragment)
+            .commit()
+    }
+
+    private fun initPromiseTimeValueCanvas() {
+        val promiseTimeValueFragment = PromiseTimeValueFragment()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.promise_time_value_frame_layout, promiseTimeValueFragment)
+            .commit()
+    }
+
+    private fun initPromisePlaceValueCanvas() {
+        val promisePlaceValueFragment = PromisePlaceValueFragment()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.promise_place_value_frame_layout, promisePlaceValueFragment)
+            .commit()
+    }
+
+    private fun initPromiseDoingValueCanvas() {
+        val promiseDoingValueFragment = PromiseDoingValueFragment()
+        supportFragmentManager.beginTransaction()
+            .replace(R.id.promise_doing_value_frame_layout, promiseDoingValueFragment)
+            .commit()
+    }
+
+    private fun initDateCanvas() {
+        val dateFragment = DateFragment()
+        supportFragmentManager.beginTransaction().replace(R.id.date_frame_layout, dateFragment)
+            .commit()
+    }
 
 }

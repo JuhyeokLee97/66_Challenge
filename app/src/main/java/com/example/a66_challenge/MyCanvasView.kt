@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewConfiguration
 import androidx.core.content.res.ResourcesCompat
 
-private const val STROKE_WIDTH = 12f // has to be float
+private const val STROKE_WIDTH = 3f // has to be float
 
 class MyCanvasView(context: Context) : View(context) {
     private lateinit var extraCanvas: Canvas
@@ -39,12 +39,20 @@ class MyCanvasView(context: Context) : View(context) {
 
     private var path = Path()
 
+    fun setCanvasBackground(bitmap: Bitmap){
+        extraBitmap = bitmap.copy(Bitmap.Config.ARGB_8888, true)
+    }
+
+    fun setCanvasBackgroundColor(color: Int){
+        extraCanvas.drawColor(color)
+    }
+
     override fun onSizeChanged(width: Int, height: Int, oldWidth: Int, oldHeight: Int) {
         super.onSizeChanged(width, height, oldWidth, oldHeight)
 
 //        extraBitmap = Bitmap.createBitmap(width, height, Bitmap.Config.ARGB_8888)
-        var originBitmap = BitmapFactory.decodeResource(context.resources, R.drawable.note_pad)
-        extraBitmap = originBitmap.copy(Bitmap.Config.ARGB_8888, true)
+//        var originBitmap = BitmapFactory.decodeResource(context.resources, R.drawable.note_pad)
+//        extraBitmap = originBitmap.copy(Bitmap.Config.ARGB_8888, true)
         extraCanvas = Canvas(extraBitmap)
 //        extraCanvas.drawColor(backgroundColor)
 
