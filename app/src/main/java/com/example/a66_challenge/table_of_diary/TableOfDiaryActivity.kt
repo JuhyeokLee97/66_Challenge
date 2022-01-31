@@ -1,4 +1,4 @@
-package com.example.a66_challenge
+package com.example.a66_challenge.table_of_diary
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
