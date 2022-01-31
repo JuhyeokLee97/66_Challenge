@@ -14,7 +14,7 @@ class SplashScreenActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.root.postDelayed(2000){
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, TableOfDiaryActivity::class.java)
             startActivity(intent)
             finish()
         }
