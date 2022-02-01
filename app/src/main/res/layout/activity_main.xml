@@ -38,18 +38,30 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
-            android:id="@+id/tv_day"
+            android:id="@+id/tv_date_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="10dp"
-            android:layout_marginEnd="20dp"
-            android:text="Day.1"
+            android:text="Day."
             android:textColor="@color/white"
             android:textSize="30sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@id/tv_logo"
-            app:layout_constraintEnd_toStartOf="@id/date_frame_layout"
+            app:layout_constraintEnd_toStartOf="@id/tv_date"
             app:layout_constraintTop_toTopOf="@id/tv_logo" />
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            tools:text="20"
+            android:layout_marginEnd="20dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@id/date_frame_layout"
+            app:layout_constraintBottom_toBottomOf="@id/tv_logo"
+            app:layout_constraintTop_toTopOf="@id/tv_logo" />
+
 
         <FrameLayout
             android:id="@+id/date_frame_layout"
