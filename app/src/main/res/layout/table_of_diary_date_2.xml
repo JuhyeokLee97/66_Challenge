@@ -16,7 +16,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_date_364"
+            android:id="@+id/btn_date_34"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
@@ -24,12 +24,12 @@
             android:gravity="center"
             android:text="34"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@id/btn_date_365"
+            app:layout_constraintEnd_toStartOf="@id/btn_date_35"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_date_365"
+            android:id="@+id/btn_date_35"
             android:layout_width="75dp"
             android:layout_height="75dp"
             android:layout_weight="1"
@@ -38,7 +38,7 @@
             android:text="35"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_date_36"
-            app:layout_constraintStart_toEndOf="@id/btn_date_364"
+            app:layout_constraintStart_toEndOf="@id/btn_date_34"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
@@ -51,7 +51,7 @@
             android:text="36"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/btn_date_37"
-            app:layout_constraintStart_toEndOf="@id/btn_date_365"
+            app:layout_constraintStart_toEndOf="@id/btn_date_35"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
