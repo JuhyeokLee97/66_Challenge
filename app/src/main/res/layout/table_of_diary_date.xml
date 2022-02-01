@@ -17,8 +17,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -30,8 +30,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -43,8 +43,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_3"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -56,8 +56,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_4"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -69,8 +69,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_5"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -95,8 +95,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_6"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="6"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -108,8 +108,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_7"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -121,8 +121,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_8"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -134,8 +134,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_9"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -147,8 +147,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_10"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -173,8 +173,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_11"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="6"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -186,8 +186,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_12"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -199,8 +199,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_13"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -212,8 +212,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_14"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -225,8 +225,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_15"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -244,15 +244,15 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/from_21_to_25_container"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/from_11_to_15_container">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_16"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="6"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -264,8 +264,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_17"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -277,8 +277,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_18"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -290,8 +290,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_19"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -303,8 +303,8 @@
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_date_20"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
             android:layout_weight="1"
             android:background="@drawable/shape_circle"
             android:gravity="center"
@@ -312,6 +312,162 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/btn_date_19"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 21 ~ 25 day -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/from_21_to_25_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@id/from_26_to_30_container"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/from_16_to_20_container">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_date_21"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="6"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:text="21"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_date_22"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_date_22"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:text="22"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_date_23"
+            app:layout_constraintStart_toEndOf="@id/btn_date_21"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_date_23"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:text="23"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_date_24"
+            app:layout_constraintStart_toEndOf="@id/btn_date_22"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_date_24"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:text="24"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_date_25"
+            app:layout_constraintStart_toEndOf="@id/btn_date_23"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_date_25"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:text="25"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_date_24"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- 26 ~ 30 day -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/from_26_to_30_container"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/from_21_to_25_container">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_date_26"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="6"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:text="26"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_date_27"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_date_27"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:text="27"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_date_28"
+            app:layout_constraintStart_toEndOf="@id/btn_date_26"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_date_28"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:text="28"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_date_29"
+            app:layout_constraintStart_toEndOf="@id/btn_date_27"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_date_29"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:text="29"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/btn_date_30"
+            app:layout_constraintStart_toEndOf="@id/btn_date_28"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn_date_30"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:background="@drawable/shape_circle"
+            android:gravity="center"
+            android:text="30"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/btn_date_29"
             app:layout_constraintTop_toTopOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
