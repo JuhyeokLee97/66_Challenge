@@ -23,7 +23,7 @@ class TableOfDiaryActivity : AppCompatActivity() {
     private fun initViewPager() {
         pagerFragmentStateAdapter = PagerFragmentStateAdapter(this)
         pagerFragmentStateAdapter.addFragment(TableOfDiaryDateFragment())
-        pagerFragmentStateAdapter.addFragment(TableOfDiaryDateFragment_60())
+        pagerFragmentStateAdapter.addFragment(TableOfDiaryDateFragment_2())
 
         binding.viewPager.adapter = pagerFragmentStateAdapter
     }
