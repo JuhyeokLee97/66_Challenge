@@ -11,4 +11,5 @@
     <color name="colorBackground">#00000000</color>
     <color name="colorPaint">#FFFFEB3B</color>
     <color name="white_blue">#ABCDED</color>
+    <color name="transparent">#00000000</color>
 </resources>

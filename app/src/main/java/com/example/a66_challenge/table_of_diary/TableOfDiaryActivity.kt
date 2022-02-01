@@ -18,6 +18,8 @@ class TableOfDiaryActivity : AppCompatActivity() {
 
     private fun initViews() {
         initViewPager()
+        initForwardButton()
+        initBackButton()
     }
 
     private fun initViewPager() {
@@ -26,5 +28,23 @@ class TableOfDiaryActivity : AppCompatActivity() {
         pagerFragmentStateAdapter.addFragment(TableOfDiaryDateFragment_2())
 
         binding.viewPager.adapter = pagerFragmentStateAdapter
+    }
+
+    private fun initForwardButton() {
+        binding.apply {
+            btnForward.setOnClickListener {
+                var temp = viewPager.currentItem
+                if (viewPager.currentItem != 1) viewPager.currentItem = 1
+            }
+        }
+    }
+
+    private fun initBackButton() {
+        binding.apply {
+            btnBack.setOnClickListener {
+                var temp = viewPager.currentItem
+                if (viewPager.currentItem != 0) viewPager.currentItem = 0
+            }
+        }
     }
 }
