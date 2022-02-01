@@ -24,8 +24,13 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
+        initDateText()
         initSuccessStatusPercentText()
         initCanvas()
+    }
+
+    private fun initDateText() {
+        binding.tvDate.text = intent.getStringExtra("date")
     }
 
 
