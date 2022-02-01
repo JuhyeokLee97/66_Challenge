@@ -62,6 +62,9 @@ class TableOfDiaryDateFragment : Fragment() {
             btnDate28.setOnClickListener { dateButtonClicked("28") }
             btnDate29.setOnClickListener { dateButtonClicked("29") }
             btnDate30.setOnClickListener { dateButtonClicked("30") }
+            btnDate31.setOnClickListener { dateButtonClicked("31") }
+            btnDate32.setOnClickListener { dateButtonClicked("32") }
+            btnDate33.setOnClickListener { dateButtonClicked("33") }
 
         }
     }
