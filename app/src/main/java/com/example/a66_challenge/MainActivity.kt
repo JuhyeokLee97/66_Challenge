@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
+import androidx.core.view.get
 import androidx.core.widget.addTextChangedListener
 import androidx.room.Room
 import com.example.a66_challenge.canvas.fragment.*
@@ -12,8 +13,8 @@ import com.example.a66_challenge.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
-
-    val handler = Handler(Looper.getMainLooper())
+    private lateinit var canvasFragment: CanvasFragment
+    private val handler = Handler(Looper.getMainLooper())
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,6 +29,7 @@ class MainActivity : AppCompatActivity() {
         initDateText()
         initSuccessStatusPercentText()
         initCanvas()
+        getDrawBitmap()
     }
 
     private fun initDateText() {
@@ -62,8 +64,15 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initCanvas() {
-        val canvasFragment = CanvasFragment()
+        canvasFragment = CanvasFragment()
         supportFragmentManager.beginTransaction().replace(R.id.canvas_view, canvasFragment)
             .commit()
+    }
+
+    private fun getDrawBitmap(){
+        binding.btnDrawBitmap.setOnClickListener {
+            var bitmap = canvasFragment.getBitmap()
+            binding.ivBitmap.setImageBitmap(bitmap)
+        }
     }
 }
