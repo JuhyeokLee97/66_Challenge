@@ -13,6 +13,7 @@ class MyCanvasView(context: Context) : View(context) {
     private lateinit var extraCanvas: Canvas
     private lateinit var extraBitmap: Bitmap
     private lateinit var frame: Rect
+    private lateinit var myCanvas: Canvas
 
     private var motionTouchEventX = 0f
     private var motionTouchEventY = 0f
@@ -59,7 +60,6 @@ class MyCanvasView(context: Context) : View(context) {
     override fun onDraw(canvas: Canvas) {
         super.onDraw(canvas)
         canvas.drawBitmap(extraBitmap, 0f, 0f, null)
-
     }
 
     override fun onTouchEvent(event: MotionEvent): Boolean {
@@ -106,5 +106,7 @@ class MyCanvasView(context: Context) : View(context) {
         path.reset()
     }
 
-
+    fun getBitmap(): Bitmap{
+        return extraBitmap
+    }
 }
