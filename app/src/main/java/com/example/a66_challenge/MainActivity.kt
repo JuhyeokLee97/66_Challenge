@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
 import androidx.core.widget.addTextChangedListener
+import androidx.room.Room
 import com.example.a66_challenge.canvas.fragment.*
 import com.example.a66_challenge.databinding.ActivityMainBinding
 
