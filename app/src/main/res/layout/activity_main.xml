@@ -53,14 +53,14 @@
             android:id="@+id/tv_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
             android:textColor="@color/white"
             android:textSize="30sp"
-            tools:text="20"
-            android:layout_marginEnd="20dp"
             android:textStyle="bold"
-            app:layout_constraintEnd_toStartOf="@id/date_frame_layout"
             app:layout_constraintBottom_toBottomOf="@id/tv_logo"
-            app:layout_constraintTop_toTopOf="@id/tv_logo" />
+            app:layout_constraintEnd_toStartOf="@id/date_frame_layout"
+            app:layout_constraintTop_toTopOf="@id/tv_logo"
+            tools:text="20" />
 
 
         <FrameLayout
@@ -503,4 +503,23 @@
         app:layout_constraintHorizontal_bias=".95"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnDrawBitmap"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_bitmap"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scaleType="fitXY"
+        app:layout_constraintBottom_toTopOf="@id/btnDrawBitmap"
+        app:layout_constraintEnd_toEndOf="@id/iv_feedback"
+        app:layout_constraintStart_toStartOf="@id/iv_to_do"
+        app:layout_constraintTop_toBottomOf="@id/iv_to_do" />
 </androidx.constraintlayout.widget.ConstraintLayout>
