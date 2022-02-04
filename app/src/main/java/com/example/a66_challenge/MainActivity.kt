@@ -10,22 +10,29 @@ import androidx.core.widget.addTextChangedListener
 import androidx.room.Room
 import com.example.a66_challenge.canvas.fragment.*
 import com.example.a66_challenge.databinding.ActivityMainBinding
+import com.example.a66_challenge.db.AppDatabase
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
     private lateinit var canvasFragment: CanvasFragment
+    private lateinit var db: AppDatabase
     private val handler = Handler(Looper.getMainLooper())
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
+        initDB()
         initViews()
     }
 
+    private fun initDB() {
+        db = Room.databaseBuilder(this, AppDatabase::class.java, "db-challenge").build()
+    }
+
     private fun initViews() {
+        getSavedBitmap()
         initDateText()
         initSuccessStatusPercentText()
         initCanvas()
@@ -69,10 +76,26 @@ class MainActivity : AppCompatActivity() {
             .commit()
     }
 
-    private fun getDrawBitmap(){
+    private fun saveDrawBitmap() {
         binding.btnDrawBitmap.setOnClickListener {
+            var id = binding.tvDate.text.toString()
             var bitmap = canvasFragment.getBitmap()
             binding.ivBitmap.setImageBitmap(bitmap)
+
+            Thread {
+                db.challengeDao().insert(Challenge(id, bitmap))
+            }.start()
         }
+    }
+
+    private fun getSavedBitmap() {
+        var id = intent.getStringExtra("date")
+        Thread{
+            db.challengeDao().getChallenge(id!!)?.let {
+                binding.ivBitmap.setImageBitmap(it.bitmap)
+            }
+        }.start()
+
+
     }
 }
