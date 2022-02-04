@@ -36,7 +36,7 @@ class MainActivity : AppCompatActivity() {
         initDateText()
         initSuccessStatusPercentText()
         initCanvas()
-        saveDrawBitmap()
+        getDrawBitmap()
     }
 
     private fun initDateText() {
