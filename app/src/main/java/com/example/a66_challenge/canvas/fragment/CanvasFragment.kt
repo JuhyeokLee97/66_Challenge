@@ -23,5 +23,13 @@ class CanvasFragment : Fragment() {
         return myCanvasView
     }
 
-    fun getBitmap(): Bitmap =myCanvasView.getBitmap()
+    fun getBitmap(): Bitmap = myCanvasView.getBitmap()
+
+    fun setToPen() {
+        myCanvasView.setToPen()
+    }
+
+    fun setToEraser() {
+        myCanvasView.setToEraser()
+    }
 }

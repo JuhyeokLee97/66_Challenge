@@ -198,6 +198,29 @@
             app:layout_constraintStart_toEndOf="@id/et_success_percentage"
             app:layout_constraintTop_toTopOf="@id/et_success_percentage" />
 
+        <ImageButton
+            android:id="@+id/btnEraser"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="20dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_erase"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/btnPencil"
+            app:layout_constraintTop_toTopOf="@id/btnPencil" />
+
+        <ImageButton
+            android:id="@+id/btnPencil"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_marginEnd="10dp"
+            android:background="?attr/selectableItemBackground"
+            android:scaleType="fitXY"
+            android:src="@drawable/ic_pencil"
+            app:layout_constraintEnd_toStartOf="@id/btnEraser"
+            app:layout_constraintTop_toTopOf="@id/et_success_percentage" />
+
         <ProgressBar
             android:id="@+id/successStatusBar"
             style="?android:attr/progressBarStyleHorizontal"
