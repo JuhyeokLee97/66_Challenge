@@ -5,7 +5,6 @@ import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
 import android.widget.Toast
-import androidx.core.view.get
 import androidx.core.widget.addTextChangedListener
 import androidx.room.Room
 import com.example.a66_challenge.canvas.fragment.*
@@ -25,6 +24,7 @@ class MainActivity : AppCompatActivity() {
 
         initDB()
         initViews()
+        setListeners()
     }
 
     private fun initDB() {
@@ -36,7 +36,24 @@ class MainActivity : AppCompatActivity() {
         initDateText()
         initSuccessStatusPercentText()
         initCanvas()
-        getDrawBitmap()
+        saveDrawBitmap()
+    }
+
+    private fun setListeners() {
+        setListenerToPencilButton()
+        setListenerToEraserButton()
+    }
+
+    private fun setListenerToPencilButton() {
+        binding.btnPencil.setOnClickListener {
+            canvasFragment.setToPen()
+        }
+    }
+
+    private fun setListenerToEraserButton() {
+        binding.btnEraser.setOnClickListener{
+            canvasFragment.setToEraser()
+        }
     }
 
     private fun initDateText() {

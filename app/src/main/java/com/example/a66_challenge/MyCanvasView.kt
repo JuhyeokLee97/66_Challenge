@@ -20,8 +20,10 @@ class MyCanvasView(context: Context) : View(context) {
     private var currentX = 0f
     private var currentY = 0f
 
-    private val touchTolerance = ViewConfiguration.get(context).scaledTouchSlop
+    // 지우개
+    private var clear = PorterDuffXfermode(PorterDuff.Mode.CLEAR)
 
+    private val touchTolerance = ViewConfiguration.get(context).scaledTouchSlop
     private val backgroundColor = ResourcesCompat.getColor(resources, R.color.colorBackground, null)
     private val drawColor = ResourcesCompat.getColor(resources, R.color.black, null)
 
@@ -100,12 +102,20 @@ class MyCanvasView(context: Context) : View(context) {
         invalidate()
     }
 
+    fun setToPen() {
+        paint.xfermode = null
+    }
+
+    fun setToEraser() {
+        paint.xfermode = clear
+    }
+
     private fun touchUp() {
         // Reset the path so it doesn't get drawn again.
         path.reset()
     }
 
-    fun getBitmap(): Bitmap{
+    fun getBitmap(): Bitmap {
         return extraBitmap
     }
 }
